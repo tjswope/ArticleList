@@ -1,6 +1,8 @@
 // class: ArticleList
 // written by: Mr. Swope
-// description: 
+// date: 11/1/2023
+// description: This class contains an ArrayList of Articles that are fetched from newsapi.org. 
+//              Several accessors and modifiers will be added. 
 
 import parser.*;
 import java.util.ArrayList;
@@ -12,7 +14,7 @@ public class ArticleList {
 	public ArticleList() {
 
 		articles = new ArrayList<>();
-		ArticleGetter a = new ArticleGetter("eagles");
+		ArticleGetter a = new ArticleGetter("eagles", "your API key here");
 		JSONArray arr = a.getArticles();
 
 		// if the JSON request was successful, arr will not be null, and we can loop
@@ -26,12 +28,5 @@ public class ArticleList {
 		}
 	}
 	
-	public String toString() {
-		String s = "Topic: eagles                number of articles: 10 ";
-		
-		for(Article a: articles)
-			s += a.toString() + "\n";
-		
-		return s;
-	}
+
 }
