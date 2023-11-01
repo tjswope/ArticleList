@@ -1,18 +1,23 @@
-
+// class: Article
+// written by: Mr. Swope
+// date: 11/1/2023
+// description: Contains the implementation for an Article that is parsed from a JSONObject.
+//              An Article will have a title, author, date and content along with all typical 
+//              accessors and modifiers.
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
-import java.time.Instant;
 import java.util.Date;
 import parser.*;
 
 public class Article {
+	// instance fields
 	private String title;
 	private String author;
 	private Date date;
 	private String content;
 
+	// constructor - passed a JSONObject, from which Article information is parsed.
 	public Article(JSONObject input) {
 		setAuthor((String)input.get("author"));
 		setTitle((String) input.get("title"));
@@ -33,8 +38,12 @@ public class Article {
 		this.author = author;
 	}
 	
+	// sets the date from a String. If a date can't be constructed from the supplied string
+	// it will be set equal to today.
 	public void setDate(String dateString) {
 
+		// The newsapi includes a 'T' and 'Z', however or DateFormat will not, so remove
+		// these extra characters.
 		dateString = dateString.replace('T', '-')
 				.substring(0, (dateString.indexOf('Z') != -1) ? dateString.indexOf('Z') : dateString.length());
 
@@ -63,6 +72,7 @@ public class Article {
 		return date;
 	}
 
+	// get's a string representation of date.
 	public String getStringDate() {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");  
 		return formatter.format(date);
