@@ -1,4 +1,9 @@
-
+// class: ArticleGetter
+// written by: Mr. Swope
+// date: 11/1/2023
+// description: This class makes an API call to newsapi.org with a supplied topic and APIKey. 
+//              getArticles returns a JSONArray with information about each article that this call
+//              returns.
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -16,7 +21,7 @@ public class ArticleGetter {
 	private String date;
 	private String apiKey;
 
-	public ArticleGetter(String topic) {
+	public ArticleGetter(String topic, String apiKey) {
 		this.topic = topic;
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");  
 		
@@ -24,9 +29,15 @@ public class ArticleGetter {
 		Instant before = now.minus(Duration.ofDays(14));
 		date = formatter.format(Date.from(before));
 		// set this string equal to your apikey from newsapi.org
-		apiKey = "";
+		this.apiKey = apiKey;
 	}
 
+	// method: getArticles()
+	// description: This function makes an API call to newsapi.org with the object's topic and API key.
+	// parameters: none
+	// return: JSONArray -> an object that contains information about each Article that was returned
+	//                      from the JSON request. This JSONArray will be used to add articles to 
+	//                      an ArrayList.
 	public JSONArray getArticles() {
 		try {
 
