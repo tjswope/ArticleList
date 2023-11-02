@@ -289,7 +289,7 @@ Next, add method level comments to each of the methods that you wrote in the Art
 
 Finally, add in line comments to any sections of code that are complex. This sort of documentation is up to you as the author, but you should try to write comments for any section of code that might not be immediate clear when viewed.
 
-<b>All JSON decoding classes were written by Fang Yidong</b><br>Original sorce code can be found @ https://github.com/fangyidong/json-simple.git<br><br>
+<b>All JSON decoding classes were written by Fang Yidong</b><br>Original source code can be found @ https://github.com/fangyidong/json-simple.git<br><br>
 <sup>1</sup> “What Is an API (Application Programming Interface)?” Amazon, The University, 1978, aws.amazon.com/what-is/api/#:~:text=APIs%20are%20mechanisms%20that%20enable,weather%20updates%20on%20your%20phone. 
 
 <sup>2</sup> “JSON.” Wikipedia, Wikimedia Foundation, 31 Oct. 2023, en.wikipedia.org/wiki/JSON. 
