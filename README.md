@@ -154,11 +154,32 @@ This class contains one constructor, which is almost finished. You’re going to
 
 <br>
 <b>Mutator Methods:</b><br>
-<b>public void swap(int article1, int ariticle2) :</b> Switches positions of article1 and article2 in articles. Remember that Articles are objects; You shouldn’t copy individual properties, instead you should move objects.
-<br>
-<b>public void removeArticles(String date) :</b> Removes all Articles that were written before date. This method will be a bit tricky because you’ll need to make use of the Date class API. 
 
-You can create a date object from a specific date as follows:
+```
+// method: swap
+// description: Switches positions of article1 and article2 in articles. Remember that Articles are objects; You shouldn’t copy individual properties,
+//              instead you should move objects.
+// parameters: the indexes of the two articles that should be swapped in the Arraylist
+// return: void
+public void swap(int article1, int ariticle2) 
+
+
+// method: removeAuthor
+// description:  Removes all Articles that were written by author.
+// parameters: The author who's articles will be removed from the ArrayList
+// return:  void
+public void removeAuthor(String author)
+
+
+// method: removeArticles
+// description:  Removes all Articles that were written before date. This method will be a bit tricky because you’ll need to make use of the Date class API. 
+// parameters: Three integers that represent the year, month and and date before which all articles will be removed
+// return:  void
+public void removeArticles(int year, int month, int date)
+
+```
+
+You can create a date object for a specific date as follows:
 
 
 ```
@@ -168,18 +189,53 @@ Date date = cal.getTime();    // Creates a new Date object @ date/month/year
 ```
 
 
-<b>public void removeAuthor(String author) :</b> Removes all Articles that were written by author.
+
 <br><br>
 <b><u>Accessor Methods:</u></b><br>
 ```
-<br><b>public ArrayList< Article >findKeyWord(String word) :</b> Creates and returns an ArrayList of all Articles that contain word in their title.
-<br><b>public ArrayList< Article > getArticles(String author) :</b> Returns an ArrayList of all Articles that were written by author.
-<br><b>public String getContent(String title) :</b> Returns the content of the Article with the given title.
-<br><b>public int numberOfArticles() :</b> Returns the number of Articles in the ArrayList.
-<br><b>public String toString() :</b> Returns a String representation of all Articles in the ArrayList. This string should contain the topic for your Articles and how many there are, along with each Article separated by a newline, which can be inserted into a string as “\n”. When printed, this string would look like the following: 
+// method: findKeyWord
+// description: Creates and returns an ArrayList of all Articles that contain word in their title.
+// parameters: String word - the word that you are looking for in the titles of Articles
+// return: An ArrayList of Articles who's title contains word.
+public ArrayList< Article > findKeyWord(String word)
+
+
+// method: getArticles
+// description: Returns an ArrayList of all Articles that were written by author.
+// parameters: String author - the name of the author who's articles the method is looking for.
+// return: An ArrayList of Articles who's author is author.
+public ArrayList< Article > getArticles(String author)
+
+
+// method: getContent
+// description: Returns the content of the Article with the given title. If there isn't an article with
+//              the given title, the function should return "article not found.
+// parameters: String title - the title of the article that the method is looking for.
+// return: A string that contains the content of the article with title. 
+public String getContent(String title)
+
+
+// method: getNumberOfArticles()
+// description: Returns the number of Articles in the ArrayList.
+// parameters: none
+// return: The number of articles in the Article arraylist.
+public int getNumberOfArticles()
+
+
+// method: toString()
+// description: Returns a String representation of all Articles in the ArrayList. This string should contain the topic
+//              for your Articles and how many there are, along with each Article separated by a newline, which can be
+//              inserted into a string as “\n”.  
+// parameters: none
+// return: A string representation of Article list. An example of what this string would look like when printed is 
+//         shown below.
+public String toString()  
+
 ```
-	
+
 ```
+
+
 Topic: eagles                                                         number of articles: 10 
 
 title = NFL trade deadline 2023: Identifying teams that should be buyers and sellers
@@ -231,6 +287,4 @@ Next, add method level comments to each of the methods that you wrote in the Art
 
 Finally, add in line comments to any sections of code that are complex. This sort of documentation is up to you as the author, but you should try to write comments for any section of code that might not be immediate clear when viewed.
 
-.description em {
-  color: #ffa500;
-}
+***********A significant protion of this code was written by FangYidong****************
