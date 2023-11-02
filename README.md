@@ -2,9 +2,9 @@
 
 This project will make an API call to newsapi.org and then parse the resulting JSON into an ArrayList.
 
-APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols. For example, the weather bureau’s software system contains daily weather data. The weather app on your phone “talks” to this system via APIs and shows you daily weather updates on your phone.
+APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols. For example, the weather bureau’s software system contains daily weather data. The weather app on your phone “talks” to this system via APIs and shows you daily weather updates on your phone.<sup>1</sup>
 
-JSON is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attributes – value pairs and arrays. It is a common data format with diverse uses in electronic data interchange, including that of web applications with servers.
+JSON is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attributes – value pairs and arrays. It is a common data format with diverse uses in electronic data interchange, including that of web applications with servers.<sup>2</sup>
 
 For this project we’ll use JSON to interpret data from newsapi.org. News API is a simple, easy-to-use API that returns JSON search results for current and historic news articles published by over 80,000 worldwide sources. Before you can start this project, you’ll need to create an account and get an API key from newsapi.org.
 
@@ -153,7 +153,8 @@ This class contains one constructor, which is almost finished. You’re going to
 3.	Replace “your API key here” with your API key from newsapi.org.
 
 <br>
-<b>Mutator Methods:</b><br>
+<b>Modifiers:</b><br>
+Add the following modifiers to your class.
 
 ```
 // method: swap
@@ -191,7 +192,8 @@ Date date = cal.getTime();    // Creates a new Date object @ date/month/year
 
 
 <br><br>
-<b><u>Accessor Methods:</u></b><br>
+<b><u>Accessors:</u></b><br>
+Add the following accessors to your class.
 ```
 // method: findKeyWord
 // description: Creates and returns an ArrayList of all Articles that contain word in their title.
@@ -287,4 +289,7 @@ Next, add method level comments to each of the methods that you wrote in the Art
 
 Finally, add in line comments to any sections of code that are complex. This sort of documentation is up to you as the author, but you should try to write comments for any section of code that might not be immediate clear when viewed.
 
-<b>A significant protion of this code was written by FangYidong</b>
+<b>All JSON decoding classes were written by Fang Yidong</b><br>Original sorce code can be found @ https://github.com/fangyidong/json-simple.git<br><br>
+<sup>1</sup> “What Is an API (Application Programming Interface)?” Amazon, The University, 1978, aws.amazon.com/what-is/api/#:~:text=APIs%20are%20mechanisms%20that%20enable,weather%20updates%20on%20your%20phone. 
+
+<sup>2</sup> “JSON.” Wikipedia, Wikimedia Foundation, 31 Oct. 2023, en.wikipedia.org/wiki/JSON. 
