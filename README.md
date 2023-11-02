@@ -287,4 +287,4 @@ Next, add method level comments to each of the methods that you wrote in the Art
 
 Finally, add in line comments to any sections of code that are complex. This sort of documentation is up to you as the author, but you should try to write comments for any section of code that might not be immediate clear when viewed.
 
-***********A significant protion of this code was written by FangYidong****************
+<b>A significant protion of this code was written by FangYidong</b>
