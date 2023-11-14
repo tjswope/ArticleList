@@ -27,7 +27,7 @@ Go to newsapi.org and create an account. Once you’ve created your account, the
 <img width="250" alt="image" src="https://github.com/tjswope/ArticleList/assets/35576679/59aa38ee-9af0-46a7-92f3-b3d69205f192">
 
 
-4. Enter https://github.com/tjswope/ArticlesProject.git in the URI field. You can leave everything else as is.
+4. Enter https://github.com/tjswope/ArticleList in the URI field. You can leave everything else as is.
 
 
 <img width="250" alt="image" src="https://github.com/tjswope/ArticleList/assets/35576679/1bf6afc1-953c-4da5-ac20-0a54ec9fd4c9">
