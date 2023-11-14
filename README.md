@@ -180,7 +180,7 @@ public void removeArticles(int year, int month, int date)
 
 ```
 
-You can create a date object for a specific date as follows:
+You can create a date object for a specific date as shown below. You will need to import the Date and Calendar class.
 
 
 ```
@@ -189,7 +189,7 @@ cal.set(year, month, date);   // year, month and date are all integers.
 Date date = cal.getTime();    // Creates a new Date object @ date/month/year
 ```
 
-
+Now that you have a Date object, you should take a look at the Data class API (https://docs.oracle.com/javase/8/docs/api/java/util/Date.html).
 
 <br><br>
 <b><u>Accessors:</u></b><br>
