@@ -41,8 +41,8 @@ Go to newsapi.org and create an account. Once you’ve created your account, the
 6.  When you’ve reached the window that allows you to choose the local destination where your project will be saved, click on the browse button, and navigate to your workspace folder. Next, check the box next to Import all existing Eclipse projects after clone finishes and then click finished.
 
 <img width="250" alt="image" src="https://github.com/tjswope/ArticleList/assets/35576679/1ba90094-9fff-4d54-b75a-8503296b0d59">
-
-
+<br></br>
+<b>If you don't yet have a project in package explorer named ArticleList after completing these steps, you should simply create a new project named ArticleList. If long correctly saved the project to your workspace the cloned files will appear in this new project.</b>
 <br><br>
 Once you’ve cloned the project, you’ll see that there are several packages and classes. We’ll be working in two of these classes: <b>ArticleList</b> and <b>Main</b>.  
 
