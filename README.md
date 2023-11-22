@@ -185,7 +185,7 @@ You can create a date object for a specific date as shown below. You will need t
 
 ```
 Calendar cal = Calendar.getInstance();
-cal.set(year, month, date);   // year, month and date are all integers. 
+cal.set(year, month-1, date);   // year, month and date are all integers. (Month is zero based, so you have to subtract 1)
 Date date = cal.getTime();    // Creates a new Date object @ date/month/year
 ```
 
