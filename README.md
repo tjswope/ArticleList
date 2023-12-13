@@ -293,3 +293,140 @@ Finally, add in line comments to any sections of code that are complex. This sor
 <sup>1</sup> “What Is an API (Application Programming Interface)?” Amazon, The University, 1978, aws.amazon.com/what-is/api/#:~:text=APIs%20are%20mechanisms%20that%20enable,weather%20updates%20on%20your%20phone. 
 
 <sup>2</sup> “JSON.” Wikipedia, Wikimedia Foundation, 31 Oct. 2023, en.wikipedia.org/wiki/JSON. 
+
+<h1 style="font-size:6vw">String Extension</h1>
+
+Now that you've finished modifiying the project to demonstrate your understanding of ArrayLists, we're going to conitue our work on the project using String methods. The String class api can be found @ <a href ="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">https://docs.oracle.com/javase/8/docs/api/java/lang/String.html</a>. The majority of your work will be done in the Article class, which is shown below:
+
+```
+public class Article {
+	private String title;
+	private String author;
+	private Date date;
+	private String content;
+
+	public Article(JSONObject input) {
+		setAuthor((String)input.get("author"));
+		setTitle((String) input.get("title"));
+		setDate((String) input.get("publishedAt"));
+		setContent((String) input.get("content"));
+	}
+
+	// setters
+	public void setContent(String content) {
+		this.content = content;
+	}
+	
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
+	public void setDate(String dateString) {
+		dateString = dateString.replace('T', '-').substring(0, (dateString.indexOf('Z') != -1)   
+                            ? dateString.indexOf('Z') : dateString.length());
+
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd-hh:mm:ss");
+		try {
+			this.date = df.parse(dateString);
+		} catch (ParseException e) {
+			date = new Date();
+		}
+	}
+
+	// getters
+	public String getTitle() {
+		return title;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public String getStringDate() {
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");  
+		return formatter.format(date);
+	}
+	public String toString() {
+		return "title = " + getTitle() + "\n" + "author = " + getAuthor() + "\n" + 
+			"date = " + getStringDate() + "\n" + "content = " + getContent() + "\n";
+	}
+}
+```
+<br>
+<b>Modifiers:</b><br>
+Add the following modifiers to your class.
+
+```
+// method: shoutWord
+// description:  Modifies the article so that every instance of the parameter word is all caps in the Article's content and title. Make sure that you only capitalize full words. For example, if the function was passed "the", it shouldn't capitalize letters in the word "theory", if it were to appear in either the title or content.
+// parameters: word - the word that will be capitalized.
+// return:  void
+public void shoutWord(String word)
+
+
+// method: wordSwap
+// description:  Given two words, switch all occurances of the worst word with the second word, and all occurances of the second word with the first word. Again, make certain that you only swap full words.
+// parameters: Three integers that represent the year, month and and date before which all articles will be removed
+// return:  void
+public void wordSwap(String word1, String word2)
+
+```
+
+<br>
+<b>Accessors:</b><br>
+Add the following accessors to your class.
+
+```
+// method: wordCount
+// description: Find the number of words in the Article's content.
+// parameters: none
+// return: int - the number of words in the Article's content.
+public void swap(int article1, int ariticle2) 
+
+
+// method: numerology
+// description:  Numerology is the study of the mystical relationships between numbers, letters, and patterns. Write a function that first switches the casing of all letters in the Article's title, and then finds the sum of the ASCII value of each character in the sentence.
+// parameters: none
+// return:  int - the sum of the ASCII value of each character in the Article's title after switching the casing of each letter.
+public void wordSwap(String word1, String word2)
+
+```
+
+<h1 style="font-size:6vw">Update class Main:</h1>
+  
+Update your menu so that the user can select an Article by entering an index and then call any of the methods that you added to the Article class on the selected Article. Make sure that you give appropriate output after calling each function.
+<h1 style="font-size:6vw">Add comments:</h1>
+ 
+
+Much of the code for this project was written by Mr. Swope and Fang Yidong. You should take credit for the changes that you’ve made while still giving credit to the original authors. Update your ArticleList and Main classes by adding the following three lines of comments below the existing class level comments. Make sure that your description is in fact descriptive.
+
+```
+// updated by:
+// date:
+// description:
+```
+
+Next, add method level comments to each of the methods that you wrote in the ArticleList class. Each method should have our regular four lines of comments. Again, make sure your comments are descriptive.
+
+```
+// method:
+// description:
+// parameters:
+// return:
+```
+
+Finally, add in line comments to any sections of code that are complex. This sort of documentation is up to you as the author, but you should try to write comments for any section of code that might not be immediate clear when viewed.
+
+
