@@ -389,7 +389,7 @@ public void wordSwap(String word1, String word2)
 Add the following accessors to your class.
 
 ```
-// method: wordCount
+// method: swap
 // description: Find the number of words in the Article's content.
 // parameters: none
 // return: int - the number of words in the Article's content.
@@ -400,7 +400,7 @@ public void swap(int article1, int ariticle2)
 // description:  Numerology is the study of the mystical relationships between numbers, letters, and patterns. Write a function that first switches the casing of all letters in the Article's title, and then finds the sum of the ASCII value of each character in the sentence.
 // parameters: none
 // return:  int - the sum of the ASCII value of each character in the Article's title after switching the casing of each letter.
-public void wordSwap(String word1, String word2)
+public int numerology()
 
 ```
 
