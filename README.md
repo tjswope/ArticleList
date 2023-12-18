@@ -378,7 +378,7 @@ public void shoutWord(String word)
 
 // method: wordSwap
 // description:  Given two words, switch all occurances of the worst word with the second word, and all occurances of the second word with the first word. Again, make certain that you only swap full words.
-// parameters: Three integers that represent the year, month and and date before which all articles will be removed
+// parameters: word1 - the word that will be replaced, word2 - the word that it will be replaced with.
 // return:  void
 public void wordSwap(String word1, String word2)
 
@@ -389,11 +389,11 @@ public void wordSwap(String word1, String word2)
 Add the following accessors to your class.
 
 ```
-// method: swap
+// method: wordCount
 // description: Find the number of words in the Article's content.
 // parameters: none
 // return: int - the number of words in the Article's content.
-public void swap(int article1, int ariticle2) 
+public void wordCount() 
 
 
 // method: numerology
