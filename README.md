@@ -393,7 +393,7 @@ Add the following accessors to your class.
 // description: Find the number of words in the Article's content.
 // parameters: none
 // return: int - the number of words in the Article's content.
-public void wordCount() 
+public int wordCount() 
 
 
 // method: numerology
